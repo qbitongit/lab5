@@ -8,7 +8,7 @@ in_state : in std_logic_vector(3 downto 0);
 flag : in std_logic;
 out_state : out std_logic_vector(3 downto 0)
 );
-end nsl
+end nsl;
 
 architecture beh of nsl is
 	
@@ -21,4 +21,4 @@ end if;
 
 end process;
 
-end beh
+end beh;

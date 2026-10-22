@@ -8,6 +8,7 @@ clk : in std_logic;
 reset : in std_logic;
 state : in std_logic_vector(3 downto 0);
 num : in std_logic_vector(9 downto 0);
+
 r : in std_logic_vector(11 downto 0);
 to_disp : out std_logic_vector(11 downto 0)
 );

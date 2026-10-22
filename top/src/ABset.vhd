@@ -11,7 +11,7 @@ state : in std_logic_vector(3 downto 0);
 A_out : out std_logic_vector(9 downto 0);
 B_out : out std_logic_vector(9 downto 0)
 );
-end ABset
+end ABset;
 
 
 architecture beh of ABset is
@@ -32,3 +32,5 @@ when others => null;
 end case;
 
 end if;
+
+end beh;

@@ -1,16 +1,13 @@
--------------------------------------------------------------------------------
--- Dr. Kaputa
--- synchronizer 3 bit example
--------------------------------------------------------------------------------
+
 library ieee;
 use ieee.std_logic_1164.all;   
 use ieee.numeric_std.all;
    
 
-entity calc_tb is 
-end calc_tb;
+entity top_tb is 
+end top_tb;
 
-architecture arch of calc_tb is
+architecture arch of top_tb is
 
 	component calc is
 	  port (

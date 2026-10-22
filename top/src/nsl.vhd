@@ -11,7 +11,8 @@ out_state : out std_logic_vector(3 downto 0)
 end nsl;
 
 architecture beh of nsl is
-	
+begin
+
 next_state : process(flag)
 begin
 

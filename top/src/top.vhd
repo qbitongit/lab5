@@ -31,6 +31,8 @@ end component;
 
 component double_dabble is
 port(
+clk : in std_logic;
+reset : in std_logic;
 result_padded : in STD_LOGIC_VECTOR(11 downto 0);
 ones : out STD_LOGIC_VECTOR(3 downto 0);
 tens : out STD_LOGIC_VECTOR(3 downto 0);
@@ -182,6 +184,8 @@ to_disp => in2disp
 
 dd1 : double_dabble
 port map(
+clk => clock,
+reset => rst,
 result_padded => result,
 ones => ones2hex,
 tens => tens2hex,

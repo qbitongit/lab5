@@ -1,7 +1,4 @@
--------------------------------------------------------------------------------
--- Dr. Kaputa
--- double_dabble demo
--------------------------------------------------------------------------------
+--
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -16,16 +13,16 @@ end blipper;
 architecture beh of blipper is
 begin
 
-process(button)
+process
 begin
 
-if(button = '0') then
+if falling_edge(button) then
 
 blip <= '1';
-wait 80 ns;
+wait for 80 ns;
 blip <= '0';
 
-end if;	
+end if;
 	
 end process;
 	

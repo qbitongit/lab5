@@ -4,6 +4,8 @@ use ieee.numeric_std.all;
 
 entity double_dabble is
 port(
+clk : in std_logic;
+reset : in std_logic;
 result_padded : in STD_LOGIC_VECTOR(11 downto 0);
 ones : out STD_LOGIC_VECTOR(3 downto 0);
 tens : out STD_LOGIC_VECTOR(3 downto 0);
@@ -15,7 +17,7 @@ end double_dabble;
 architecture beh of double_dabble is
 begin
 
-bcd1: process(result_padded)
+process(clk, reset)
   -- temporary variable
   variable temp : STD_LOGIC_VECTOR (11 downto 0);
   
@@ -31,6 +33,14 @@ bcd1: process(result_padded)
   -- https://en.wikipedia.org/wiki/Double_dabble
   
   begin
+  
+  if reset = '1' then
+  
+  ones <= "0000";
+  tens <= "0000";
+  hundreds <= "0000";
+  
+  elsif rising_edge(clk) then
     -- zero the bcd variable
     bcd := (others => '0');
     
@@ -69,6 +79,10 @@ bcd1: process(result_padded)
     tens <= STD_LOGIC_VECTOR(bcd(7 downto 4));
     hundreds <= STD_LOGIC_VECTOR(bcd(11 downto 8));
     --thousands <= STD_LOGIC_VECTOR(bcd(15 downto 12));
-  end process bcd1; 
+	
+	end if;
+	
+	
+  end process; 
   
  end beh;

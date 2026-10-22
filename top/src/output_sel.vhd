@@ -15,8 +15,6 @@ end output_sel;
 
 architecture beh of output_sel is
 
-signal n : std_logic_vector(11 downto 0) := "000" & num;
-
 begin
 
 process(clk, reset)
@@ -28,12 +26,16 @@ to_disp <= (others => '0');
 elsif rising_edge(clk) then
 
 case state is
-when "0001" => to_disp <= n;
-when "0010" => to_disp <= n;
+when "0001" => to_disp <= ("000" & num);
+when "0010" => to_disp <= ("000" & num);
 when "0100" => to_disp <= r;
 when "1000" => to_disp <= r;
+when others => to_disp <= (others => '0');
+
 end case;
 
 end if;
 
 end process;
+
+end beh;

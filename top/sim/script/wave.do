@@ -19,14 +19,15 @@ radix define States {
     -default default
 }
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /calc_tb/uut/clock
-add wave -noupdate /calc_tb/uut/rst
-add wave -noupdate /calc_tb/uut/butt_async
-add wave -noupdate /calc_tb/uut/num_async
-add wave -noupdate /calc_tb/uut/state_leds
-add wave -noupdate -radix States /calc_tb/uut/hex0
-add wave -noupdate -radix States /calc_tb/uut/hex1
-add wave -noupdate -radix States /calc_tb/uut/hex2
+add wave -noupdate /top_tb/uut/clock
+add wave -noupdate /top_tb/uut/rst
+add wave -noupdate /top_tb/uut/butt_async
+add wave -noupdate /top_tb/uut/num_async
+add wave -noupdate /top_tb/uut/state_leds
+add wave -noupdate -radix States /top_tb/uut/hex1s
+add wave -noupdate -radix States /top_tb/uut/hex10s
+add wave -noupdate -radix States /top_tb/uut/hex100s
+
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {50000 ps} 0}
 quietly wave cursor active 1

@@ -11,7 +11,7 @@ vcom -93 -work work ../../src/synchronizer_1bit.vhd
 vcom -93 -work work ../../src/synchronizer_9bit.vhd
 
 
-vcom -93 -work work ../src/calc_tb.vhd
-vsim -voptargs=+acc calc_tb
+vcom -93 -work work ../src/top_tb.vhd
+vsim -voptargs=+acc top_tb
 do wave.do
 run 10000 ns

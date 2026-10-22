@@ -71,4 +71,4 @@ bcd1: process(result_padded)
     --thousands <= STD_LOGIC_VECTOR(bcd(15 downto 12));
   end process bcd1; 
   
- end beh
+ end beh;

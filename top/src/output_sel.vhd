@@ -7,7 +7,7 @@ port(
 clk : in std_logic;
 reset : in std_logic;
 state : in std_logic_vector(3 downto 0);
-num : in std_logic_vector(9 downto 0);
+num : in std_logic_vector(8 downto 0);
 r : in std_logic_vector(11 downto 0);
 to_disp : out std_logic_vector(11 downto 0)
 );
@@ -15,7 +15,7 @@ end output_sel;
 
 architecture beh of output_sel is
 
-signal n : std_logic_vector(11 downto 0) := "00" & num;
+signal n : std_logic_vector(11 downto 0) := "000" & num;
 
 begin
 

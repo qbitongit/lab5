@@ -5,19 +5,19 @@
 library ieee;
 use ieee.std_logic_1164.all;      
 
-entity synchronizer_10bit is 
+entity synchronizer_9bit is 
   port (
     clk               : in std_logic;
     reset             : in std_logic;
-    async_in          : in std_logic_vector(9 downto 0);
-    sync_out          : out std_logic_vector(9 downto 0)
+    async_in          : in std_logic_vector(8 downto 0);
+    sync_out          : out std_logic_vector(8 downto 0)
   );
-end synchronizer_10bit;
+end synchronizer_9bit;
 
-architecture beh of synchronizer_10bit is
+architecture beh of synchronizer_9bit is
 -- signal declarations
-signal flop1     : std_logic_vector(9 downto 0);
-signal flop2     : std_logic_vector(9 downto 0);
+signal flop1     : std_logic_vector(8 downto 0);
+signal flop2     : std_logic_vector(8 downto 0);
 
 begin 
 double_flop :process(reset,clk,async_in)

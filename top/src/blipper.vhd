@@ -14,10 +14,9 @@ blip	: out std_logic := '0'
 end blipper;  
 
 architecture beh of blipper is
+begin
 
-signal count
-
-up : process(button)
+process(button)
 begin
 
 if(button = '0') then
@@ -30,4 +29,4 @@ end if;
 	
 end process;
 	
-end beh
+end beh;

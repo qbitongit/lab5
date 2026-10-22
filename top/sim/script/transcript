@@ -1,0 +1,96 @@
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:10 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../../src/calc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity calc
+# -- Compiling architecture arch of calc
+# End time: 20:02:10 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:10 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../../src/add_sub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity add_sub
+# -- Compiling architecture beh of add_sub
+# End time: 20:02:10 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:10 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seven_seg
+# -- Compiling architecture beh of seven_seg
+# End time: 20:02:10 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:11 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../../src/seven_seg_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity seven_seg_3bit
+# -- Compiling architecture beh of seven_seg_3bit
+# End time: 20:02:11 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:11 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_3bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_3bit
+# -- Compiling architecture beh of synchronizer_3bit
+# End time: 20:02:11 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:11 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../../src/synchronizer_1bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity synchronizer_1bit
+# -- Compiling architecture beh of synchronizer_1bit
+# End time: 20:02:11 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:02:11 on Oct 14,2026
+# vcom -reportprogress 300 -93 -work work ../src/calc_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity calc_tb
+# -- Compiling architecture arch of calc_tb
+# ** Warning: ../src/calc_tb.vhd(40): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/calc_tb.vhd(45): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: ../src/calc_tb.vhd(62): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 20:02:11 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" calc_tb 
+# Start time: 20:02:11 on Oct 14,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.calc_tb(arch)
+# Loading work.calc(arch)
+# Loading work.synchronizer_3bit(beh)
+# Loading work.synchronizer_1bit(beh)
+# Loading work.add_sub(beh)
+# Loading work.seven_seg_3bit(beh)
+# Loading work.seven_seg(beh)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: quinc  Hostname: Q  ProcessID: 28228
+#           Attempting to use alternate WLF file "./wlft8e01dt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8e01dt

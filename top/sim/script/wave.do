@@ -24,6 +24,7 @@ add wave -noupdate /top_tb/uut/rst
 add wave -noupdate /top_tb/uut/butt_async
 add wave -noupdate /top_tb/uut/num_async
 add wave -noupdate /top_tb/uut/state_leds
+add wave -noupdate /top_tb/this_state
 add wave -noupdate -radix States /top_tb/uut/hex1s
 add wave -noupdate -radix States /top_tb/uut/hex10s
 add wave -noupdate -radix States /top_tb/uut/hex100s

@@ -92,6 +92,8 @@ end component;
 
 component blipper is
 port (
+clk : in std_logic;
+reset : in std_logic;
 button	: in std_logic;
 blip	: out std_logic := '0'
  );  
@@ -133,6 +135,8 @@ sync_out => butt_sync
 
 blipper1 : blipper
 port map(
+clk => clock,
+reset => rst,
 button => butt_sync,
 blip => state_trig
 );
@@ -221,6 +225,8 @@ elsif rising_edge(clock) then
 this_state <= next_state;
 	
 end if;
+
+state_leds <= this_state;
 
 end process;
 

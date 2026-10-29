@@ -5,8 +5,8 @@ use ieee.numeric_std.all;
 
 entity blipper is
 port (
-clk: in std_logic;
-reset: in std_logic;
+clk : in std_logic;
+reset : in std_logic;
 button	: in std_logic;
 blip	: out std_logic := '0'
  );  
@@ -14,20 +14,29 @@ end blipper;
 
 architecture beh of blipper is
 
-constant max = unsigned(1 downto 0) := 3;
-signal count = unsigned(1 downto 0):= 0;
+signal out_sig : std_logic := '0';
 
 begin
 
-go_hi : process(button, reset)
+process(button, clk, reset)
+
 begin
 
-if reset = 1 then 
-	blip = '0';
-elsif falling_edge(button) then
+if reset = '1' then
+out_sig <= '0';
 
-blip <= '1';
+elsif rising_edge(clk) then
+
+if button = '0' then
+out_sig <= '1';
+else
+out_sig <= '0';
+end if;
 
 end if;
 	
 end process;
+
+blip <= out_sig;
+
+end beh;

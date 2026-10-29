@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hex1s[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1s[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1s[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1s[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1s[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1s[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex1s[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex10s[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hex100s[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "butt_async",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[0]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[1]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[2]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[3]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[4]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[5]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[6]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[7]",
+					"strict" : false
+				},
+				{
+					"name" : "num_async[8]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

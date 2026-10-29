@@ -13,12 +13,13 @@ end nsl;
 architecture beh of nsl is
 begin
 
-next_state : process(flag)
+next_state : process (flag)
 begin
 
 if(rising_edge(flag)) then
 out_state <= (in_state(2 downto 0) & in_state(3));
 end if;
+
 
 end process;
 

@@ -43,6 +43,7 @@ reset : process
 begin
 wait for 50 ns;
 rst_tb <= '0';
+wait;
 end process;
 
 i_num : process
@@ -52,6 +53,7 @@ for i in 0 to 44 loop
 num_tb <= std_logic_vector(unsigned(num_tb) + 11);
 wait for 33 ns;
 end loop;
+wait;
 	
 end process;
 

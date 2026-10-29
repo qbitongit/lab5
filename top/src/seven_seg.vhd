@@ -11,7 +11,7 @@ end entity;
 
 architecture beh of seven_seg is
 begin
-	process(bcd) 
+	process (bcd)
 	begin
 		case bcd is
 			when "0000" => seven_seg_out <= "1000000";

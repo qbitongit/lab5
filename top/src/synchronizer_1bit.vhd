@@ -21,6 +21,7 @@ signal flop2     : std_logic;
 
 begin 
 double_flop :process(reset,clk,async_in)
+
   begin
     if reset = '1' then
       flop1 <= '0'; 
@@ -33,3 +34,4 @@ end process;
 
 sync_out <= flop2;
 end beh; 
+

@@ -28,7 +28,7 @@ begin
 unsA <= unsigned("000" & A);
 unsB <= unsigned("000" & B);
 
-process(clk) 
+process(clk, reset) 
 begin
 
 if reset = '1' then

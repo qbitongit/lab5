@@ -14,6 +14,7 @@ rst => this_state[0].PRESET
 rst => this_state[1].ACLR
 rst => this_state[2].ACLR
 rst => this_state[3].ACLR
+rst => nsl:nsl1.reset
 rst => synchronizer_9bit:number_sync.reset
 rst => ABset:ABset1.reset
 rst => add_sub:addsub1.reset
@@ -29,10 +30,10 @@ num_async[5] => synchronizer_9bit:number_sync.async_in[5]
 num_async[6] => synchronizer_9bit:number_sync.async_in[6]
 num_async[7] => synchronizer_9bit:number_sync.async_in[7]
 num_async[8] => synchronizer_9bit:number_sync.async_in[8]
-state_leds[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-state_leds[1] <= state_leds[1].DB_MAX_OUTPUT_PORT_TYPE
-state_leds[2] <= state_leds[2].DB_MAX_OUTPUT_PORT_TYPE
-state_leds[3] <= state_leds[3].DB_MAX_OUTPUT_PORT_TYPE
+state_leds[0] <= this_state[0].DB_MAX_OUTPUT_PORT_TYPE
+state_leds[1] <= this_state[1].DB_MAX_OUTPUT_PORT_TYPE
+state_leds[2] <= this_state[2].DB_MAX_OUTPUT_PORT_TYPE
+state_leds[3] <= this_state[3].DB_MAX_OUTPUT_PORT_TYPE
 hex1s[0] <= seven_seg:hex2.seven_seg_out[0]
 hex1s[1] <= seven_seg:hex2.seven_seg_out[1]
 hex1s[2] <= seven_seg:hex2.seven_seg_out[2]
@@ -59,30 +60,33 @@ hex100s[6] <= seven_seg:hex0.seven_seg_out[6]
 |top|synchronizer_1bit:button_sync
 clk => flop2.CLK
 clk => flop1.CLK
-reset => flop2.ACLR
-reset => flop1.ACLR
+reset => flop2.PRESET
+reset => flop1.PRESET
 async_in => flop1.DATAIN
 sync_out <= flop2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|blipper:blipper1
-button => blip.DATAIN
-blip <= button.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |top|nsl:nsl1
-in_state[0] => out_state[1]~reg0.DATAIN
-in_state[1] => out_state[2]~reg0.DATAIN
-in_state[2] => out_state[3]~reg0.DATAIN
-in_state[3] => out_state[0]~reg0.DATAIN
-flag => out_state[0]~reg0.CLK
-flag => out_state[1]~reg0.CLK
-flag => out_state[2]~reg0.CLK
-flag => out_state[3]~reg0.CLK
-out_state[0] <= out_state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_state[1] <= out_state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_state[2] <= out_state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-out_state[3] <= out_state[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+reset => out_state.OUTPUTSELECT
+reset => out_state.OUTPUTSELECT
+reset => out_state.OUTPUTSELECT
+reset => out_state.OUTPUTSELECT
+in_state[0] => out_state.DATAB
+in_state[0] => out_state.DATAA
+in_state[1] => out_state.DATAB
+in_state[1] => out_state.DATAA
+in_state[2] => out_state.DATAB
+in_state[2] => out_state.DATAA
+in_state[3] => out_state.DATAA
+in_state[3] => out_state.DATAB
+flag => out_state.OUTPUTSELECT
+flag => out_state.OUTPUTSELECT
+flag => out_state.OUTPUTSELECT
+flag => out_state.OUTPUTSELECT
+out_state[0] <= out_state.DB_MAX_OUTPUT_PORT_TYPE
+out_state[1] <= out_state.DB_MAX_OUTPUT_PORT_TYPE
+out_state[2] <= out_state.DB_MAX_OUTPUT_PORT_TYPE
+out_state[3] <= out_state.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|synchronizer_9bit:number_sync

@@ -36,15 +36,19 @@ unsR <= (others => '0');
 
 elsif rising_edge(clk) then
 
+
+if unsR > MAX_COUNT then
+unsR <= MAX_COUNT;
+elsif unsR < MAX_COUNT then
+
 case state is
 when "0100" => unsR <= unsA + unsB;
 when "1000" => unsR <= unsA - unsB;
 when others => unsR <= (others => '0');
 end case;
 
-if unsR > MAX_COUNT then
-unsR <= MAX_COUNT;
 end if;
+
 
 end if;
 

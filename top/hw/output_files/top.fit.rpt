@@ -1,5 +1,5 @@
 Fitter report for top
-Thu Oct 29 14:12:14 2026
+Mon Nov 02 11:01:16 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,15 +62,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Oct 29 14:12:14 2026       ;
+; Fitter Status                   ; Successful - Mon Nov 02 11:01:16 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 52 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 74                                          ;
+; Logic utilization (in ALMs)     ; 65 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 88                                          ;
 ; Total pins                      ; 37 / 457 ( 8 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -150,39 +150,43 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
-;     Processor 7            ;   0.2%      ;
-;     Processor 8            ;   0.2%      ;
-;     Processor 9            ;   0.2%      ;
-;     Processor 10           ;   0.2%      ;
-;     Processor 11           ;   0.2%      ;
-;     Processor 12           ;   0.2%      ;
-;     Processor 13           ;   0.2%      ;
-;     Processors 14-16       ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processor 9            ;   0.0%      ;
+;     Processor 10           ;   0.0%      ;
+;     Processors 11-16       ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                  ;
-+-------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
-; Node                          ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                        ; Destination Port ; Destination Port Name ;
-+-------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
-; clock~inputCLKENA0            ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                         ;                  ;                       ;
-; ABset:ABset1|B_out[0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ABset:ABset1|B_out[0]~DUPLICATE         ;                  ;                       ;
-; add_sub:addsub1|unsR[3]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[3]~DUPLICATE       ;                  ;                       ;
-; add_sub:addsub1|unsR[7]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[7]~DUPLICATE       ;                  ;                       ;
-; add_sub:addsub1|unsR[9]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[9]~DUPLICATE       ;                  ;                       ;
-; double_dabble:dd1|hundreds[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; double_dabble:dd1|hundreds[1]~DUPLICATE ;                  ;                       ;
-+-------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                          ;
++-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
+; Node                              ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                            ; Destination Port ; Destination Port Name ;
++-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
+; clock~inputCLKENA0                ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                             ;                  ;                       ;
+; ABset:ABset1|A_out[0]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; ABset:ABset1|A_out[0]~DUPLICATE             ;                  ;                       ;
+; add_sub:addsub1|unsR[3]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[3]~DUPLICATE           ;                  ;                       ;
+; add_sub:addsub1|unsR[5]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[5]~DUPLICATE           ;                  ;                       ;
+; add_sub:addsub1|unsR[9]           ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[9]~DUPLICATE           ;                  ;                       ;
+; add_sub:addsub1|unsR[10]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; add_sub:addsub1|unsR[10]~DUPLICATE          ;                  ;                       ;
+; output_sel:output_sel1|to_disp[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; output_sel:output_sel1|to_disp[2]~DUPLICATE ;                  ;                       ;
+; output_sel:output_sel1|to_disp[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; output_sel:output_sel1|to_disp[3]~DUPLICATE ;                  ;                       ;
+; output_sel:output_sel1|to_disp[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; output_sel:output_sel1|to_disp[5]~DUPLICATE ;                  ;                       ;
+; output_sel:output_sel1|to_disp[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; output_sel:output_sel1|to_disp[7]~DUPLICATE ;                  ;                       ;
+; output_sel:output_sel1|to_disp[8] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; output_sel:output_sel1|to_disp[8]~DUPLICATE ;                  ;                       ;
+; output_sel:output_sel1|to_disp[9] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; output_sel:output_sel1|to_disp[9]~DUPLICATE ;                  ;                       ;
+; this_state[0]                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; this_state[0]~DUPLICATE                     ;                  ;                       ;
++-----------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -191,8 +195,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 233 ) ; 0.00 % ( 0 / 233 )         ; 0.00 % ( 0 / 233 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 233 ) ; 0.00 % ( 0 / 233 )         ; 0.00 % ( 0 / 233 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 252 ) ; 0.00 % ( 0 / 252 )         ; 0.00 % ( 0 / 252 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 252 ) ; 0.00 % ( 0 / 252 )         ; 0.00 % ( 0 / 252 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -215,7 +219,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 233 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 252 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -231,14 +235,14 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 52 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 52                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 70 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 22                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 35                 ;       ;
-;         [c] ALMs used for registers                         ; 13                 ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 65 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 65                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 71 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 24                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 33                 ;       ;
+;         [c] ALMs used for registers                         ; 14                 ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 18 / 32,070        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -247,25 +251,25 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 13 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 13                 ;       ;
+; Total LABs:  partially or completely used                   ; 10 / 3,207         ; < 1 % ;
+;     -- Logic LABs                                           ; 10                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 89                 ;       ;
-;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 14                 ;       ;
+; Combinational ALUT usage for logic                          ; 101                ;       ;
+;     -- 7 input functions                                    ; 2                  ;       ;
+;     -- 6 input functions                                    ; 16                 ;       ;
 ;     -- 5 input functions                                    ; 23                 ;       ;
-;     -- 4 input functions                                    ; 28                 ;       ;
-;     -- <=3 input functions                                  ; 24                 ;       ;
+;     -- 4 input functions                                    ; 31                 ;       ;
+;     -- <=3 input functions                                  ; 29                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 13                 ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 74                 ;       ;
+; Dedicated logic registers                                   ; 88                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 69 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 5 / 64,140         ; < 1 % ;
+;         -- Primary logic registers                          ; 76 / 64,140        ; < 1 % ;
+;         -- Secondary logic registers                        ; 12 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 69                 ;       ;
-;         -- Routing optimization registers                   ; 5                  ;       ;
+;         -- Design implementation registers                  ; 76                 ;       ;
+;         -- Routing optimization registers                   ; 12                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 37 / 457           ; 8 %   ;
@@ -321,11 +325,11 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.3% / 1.4% / 1.0% ;       ;
-; Maximum fan-out                                             ; 70                 ;       ;
-; Highest non-global fan-out                                  ; 70                 ;       ;
-; Total fan-out                                               ; 677                ;       ;
-; Average fan-out                                             ; 2.70               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.3% / 1.4% / 0.8% ;       ;
+; Maximum fan-out                                             ; 89                 ;       ;
+; Highest non-global fan-out                                  ; 89                 ;       ;
+; Total fan-out                                               ; 828                ;       ;
+; Average fan-out                                             ; 2.99               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -334,14 +338,14 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 52 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 52                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 70 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 22                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 35                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 13                   ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 65 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 65                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 71 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 24                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 33                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 14                   ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 18 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 6 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -350,16 +354,16 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 13 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 13                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 10 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 10                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 89                   ; 0                              ;
-;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 14                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 101                  ; 0                              ;
+;     -- 7 input functions                                    ; 2                    ; 0                              ;
+;     -- 6 input functions                                    ; 16                   ; 0                              ;
 ;     -- 5 input functions                                    ; 23                   ; 0                              ;
-;     -- 4 input functions                                    ; 28                   ; 0                              ;
-;     -- <=3 input functions                                  ; 24                   ; 0                              ;
+;     -- 4 input functions                                    ; 31                   ; 0                              ;
+;     -- <=3 input functions                                  ; 29                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 13                   ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
@@ -367,11 +371,11 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 69 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 5 / 64140 ( < 1 % )  ; 0 / 64140 ( 0 % )              ;
+;         -- Primary logic registers                          ; 76 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 12 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 69                   ; 0                              ;
-;         -- Routing optimization registers                   ; 5                    ; 0                              ;
+;         -- Design implementation registers                  ; 76                   ; 0                              ;
+;         -- Routing optimization registers                   ; 12                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -388,8 +392,8 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 687                  ; 0                              ;
-;     -- Registered Connections                               ; 268                  ; 0                              ;
+;     -- Total Connections                                    ; 838                  ; 0                              ;
+;     -- Registered Connections                               ; 319                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -422,7 +426,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; Name         ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; butt_async   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; clock        ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 70                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clock        ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 88                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; num_async[0] ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; num_async[1] ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; num_async[2] ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -432,7 +436,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; num_async[6] ; AE11  ; 3A       ; 4            ; 0            ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; num_async[7] ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; num_async[8] ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; rst          ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 70                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; rst          ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 89                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +--------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -462,10 +466,10 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; hex1s[4]      ; AF28  ; 5A       ; 89           ; 13           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; hex1s[5]      ; AG28  ; 5A       ; 89           ; 13           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; hex1s[6]      ; AH28  ; 5A       ; 89           ; 4            ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; state_leds[0] ; AG11  ; 3B       ; 18           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; state_leds[1] ; AG20  ; 4A       ; 62           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; state_leds[2] ; AE9   ; 3A       ; 2            ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; state_leds[3] ; F13   ; 8A       ; 26           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; state_leds[0] ; W19   ; 4A       ; 80           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; state_leds[1] ; V18   ; 4A       ; 80           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; state_leds[2] ; AJ27  ; 4A       ; 80           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; state_leds[3] ; AE23  ; 4A       ; 78           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -476,9 +480,9 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 +----------+------------------+---------------+--------------+---------------+
 ; B2L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
 ; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; 3A       ; 10 / 32 ( 31 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 4 / 48 ( 8 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 1 / 80 ( 1 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 9 / 32 ( 28 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 3 / 48 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 4 / 80 ( 5 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 15 / 32 ( 47 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 6 / 16 ( 38 % )  ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -487,7 +491,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 1 / 80 ( 1 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 +----------+------------------+---------------+--------------+---------------+
 
 
@@ -652,7 +656,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; AE6      ; 51         ; 3A             ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE7      ; 60         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE8      ; 47         ; 3A             ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AE9      ; 53         ; 3A             ; state_leds[2]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE9      ; 53         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE11     ; 59         ; 3A             ; num_async[6]                    ; input  ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -666,7 +670,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; AE20     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE21     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE22     ; 191        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE23     ; 189        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE23     ; 189        ; 4A             ; state_leds[3]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE24     ; 209        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE25     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE26     ; 220        ; 5A             ; hex1s[0]                        ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
@@ -714,7 +718,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG10     ; 86         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG11     ; 85         ; 3B             ; state_leds[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG11     ; 85         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -723,7 +727,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; AG17     ; 132        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG18     ; 150        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG19     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AG20     ; 157        ; 4A             ; state_leds[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG20     ; 157        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG21     ; 143        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG22     ; 166        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG23     ; 163        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -790,7 +794,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; AJ24     ; 182        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ25     ; 180        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ26     ; 187        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ27     ; 195        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ27     ; 195        ; 4A             ; state_leds[2]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ28     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AJ29     ; 216        ; 5A             ; hex10s[0]                       ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -954,7 +958,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; F10      ; 528        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F11      ; 502        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F12      ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; F13      ; 486        ; 8A             ; state_leds[3]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; F13      ; 486        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F14      ; 468        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F15      ; 466        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F16      ; 442        ; 7D             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1319,7 +1323,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; V15      ;            ; --             ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; V16      ; 138        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V17      ; 154        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; V18      ; 194        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; V18      ; 194        ; 4A             ; state_leds[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; V19      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V20      ; 292        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V21      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1350,7 +1354,7 @@ The pin-out file can be found in C:/projects/HDL/lab5/top/hw/output_files/top.pi
 ; W16      ; 136        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W17      ; 152        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W18      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; W19      ; 192        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; W19      ; 192        ; 4A             ; state_leds[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; W20      ; 217        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W21      ; 221        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W22      ; 223        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1450,16 +1454,16 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node         ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name       ; Library Name ;
 +------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+-------------------+--------------+
-; |top                               ; 52.0 (0.8)           ; 69.0 (2.5)                       ; 17.0 (1.7)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 89 (2)              ; 74 (4)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 37   ; 0            ; |top                               ; top               ; work         ;
-;    |ABset:ABset1|                  ; 5.7 (5.7)            ; 5.7 (5.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|ABset:ABset1                  ; ABset             ; work         ;
-;    |add_sub:addsub1|               ; 12.9 (12.9)          ; 14.3 (14.3)                      ; 1.4 (1.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 35 (35)             ; 14 (14)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|add_sub:addsub1               ; add_sub           ; work         ;
-;    |double_dabble:dd1|             ; 20.7 (20.7)          ; 25.0 (25.0)                      ; 4.3 (4.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 28 (28)             ; 13 (13)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|double_dabble:dd1             ; double_dabble     ; work         ;
-;    |nsl:nsl1|                      ; 1.7 (1.7)            ; 2.0 (2.0)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|nsl:nsl1                      ; nsl               ; work         ;
+; |top                               ; 64.5 (2.3)           ; 70.5 (2.7)                       ; 6.0 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 101 (4)             ; 88 (5)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 37   ; 0            ; |top                               ; top               ; work         ;
+;    |ABset:ABset1|                  ; 5.5 (5.5)            ; 5.8 (5.8)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|ABset:ABset1                  ; ABset             ; work         ;
+;    |add_sub:addsub1|               ; 18.6 (18.6)          ; 19.9 (19.9)                      ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 42 (42)             ; 15 (15)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|add_sub:addsub1               ; add_sub           ; work         ;
+;    |double_dabble:dd1|             ; 18.5 (18.5)          ; 18.5 (18.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 28 (28)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|double_dabble:dd1             ; double_dabble     ; work         ;
+;    |output_sel:output_sel1|        ; 4.8 (4.8)            ; 5.1 (5.1)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|output_sel:output_sel1        ; output_sel        ; work         ;
 ;    |seven_seg:hex0|                ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|seven_seg:hex0                ; seven_seg         ; work         ;
 ;    |seven_seg:hex1|                ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|seven_seg:hex1                ; seven_seg         ; work         ;
 ;    |seven_seg:hex2|                ; 3.2 (3.2)            ; 3.5 (3.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|seven_seg:hex2                ; seven_seg         ; work         ;
-;    |synchronizer_1bit:button_sync| ; 0.0 (0.0)            ; 1.0 (1.0)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|synchronizer_1bit:button_sync ; synchronizer_1bit ; work         ;
-;    |synchronizer_9bit:number_sync| ; 0.0 (0.0)            ; 8.0 (8.0)                        ; 8.0 (8.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|synchronizer_9bit:number_sync ; synchronizer_9bit ; work         ;
+;    |synchronizer_1bit:button_sync| ; 0.9 (0.9)            ; 1.0 (1.0)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|synchronizer_1bit:button_sync ; synchronizer_1bit ; work         ;
+;    |synchronizer_9bit:number_sync| ; 3.5 (3.5)            ; 7.0 (7.0)                        ; 3.5 (3.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |top|synchronizer_9bit:number_sync ; synchronizer_9bit ; work         ;
 +------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1498,12 +1502,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rst           ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; butt_async    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; num_async[0]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; num_async[1]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; num_async[1]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; num_async[2]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; num_async[3]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; num_async[4]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; num_async[4]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; num_async[5]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; num_async[6]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; num_async[6]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; num_async[7]  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; num_async[8]  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +---------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
@@ -1515,9 +1519,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                  ; Pad To Core Index ; Setting ;
 +------------------------------------------------------+-------------------+---------+
 ; clock                                                ;                   ;         ;
-;      - synchronizer_1bit:button_sync|flop2           ; 0                 ; 0       ;
 ; rst                                                  ;                   ;         ;
-;      - add_sub:addsub1|unsR[0]                       ; 0                 ; 0       ;
+;      - this_state[1]                                 ; 0                 ; 0       ;
+;      - this_state[2]                                 ; 0                 ; 0       ;
+;      - this_state[3]                                 ; 0                 ; 0       ;
 ;      - double_dabble:dd1|hundreds[0]                 ; 0                 ; 0       ;
 ;      - double_dabble:dd1|hundreds[1]                 ; 0                 ; 0       ;
 ;      - double_dabble:dd1|hundreds[2]                 ; 0                 ; 0       ;
@@ -1530,20 +1535,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - double_dabble:dd1|ones[1]                     ; 0                 ; 0       ;
 ;      - double_dabble:dd1|ones[2]                     ; 0                 ; 0       ;
 ;      - double_dabble:dd1|ones[3]                     ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[3]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[6]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[8]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[7]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[5]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[4]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[2]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[0]             ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[1]             ; 0                 ; 0       ;
+;      - this_state[0]                                 ; 0                 ; 0       ;
+;      - synchronizer_1bit:button_sync|flop2           ; 0                 ; 0       ;
+;      - this_state[1]~1                               ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[10]            ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[9]             ; 0                 ; 0       ;
+;      - synchronizer_1bit:button_sync|flop1           ; 0                 ; 0       ;
+;      - add_sub:addsub1|unsR[0]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[0]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[1]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[1]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[2]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[2]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[3]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[3]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[4]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[4]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[5]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[5]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[6]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[6]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[7]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[7]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[8]                       ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop2[8]        ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[10]                      ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[9]                       ; 0                 ; 0       ;
-;      - this_state[3]                                 ; 0                 ; 0       ;
-;      - this_state[0]                                 ; 0                 ; 0       ;
-;      - this_state[1]                                 ; 0                 ; 0       ;
-;      - this_state[2]                                 ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[0]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[1]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[2]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[3]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[4]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[5]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[6]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[7]        ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[8]        ; 0                 ; 0       ;
 ;      - ABset:ABset1|A_out[0]                         ; 0                 ; 0       ;
 ;      - ABset:ABset1|B_out[0]                         ; 0                 ; 0       ;
 ;      - ABset:ABset1|A_out[1]                         ; 0                 ; 0       ;
@@ -1562,66 +1597,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ABset:ABset1|B_out[7]                         ; 0                 ; 0       ;
 ;      - ABset:ABset1|A_out[8]                         ; 0                 ; 0       ;
 ;      - ABset:ABset1|B_out[8]                         ; 0                 ; 0       ;
-;      - synchronizer_1bit:button_sync|flop2           ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[0]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[1]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[2]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[3]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[4]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[5]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[6]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[7]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop2[8]        ; 0                 ; 0       ;
-;      - synchronizer_1bit:button_sync|flop1           ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[0]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[1]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[2]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[3]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[4]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[5]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[6]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[7]        ; 0                 ; 0       ;
-;      - synchronizer_9bit:number_sync|flop1[8]        ; 0                 ; 0       ;
-;      - double_dabble:dd1|hundreds[1]~DUPLICATE       ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[2]~DUPLICATE   ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[3]~DUPLICATE   ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[5]~DUPLICATE   ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[7]~DUPLICATE   ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[8]~DUPLICATE   ; 0                 ; 0       ;
+;      - this_state[0]~DUPLICATE                       ; 0                 ; 0       ;
+;      - output_sel:output_sel1|to_disp[9]~DUPLICATE   ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[3]~DUPLICATE             ; 0                 ; 0       ;
-;      - add_sub:addsub1|unsR[7]~DUPLICATE             ; 0                 ; 0       ;
+;      - add_sub:addsub1|unsR[5]~DUPLICATE             ; 0                 ; 0       ;
+;      - add_sub:addsub1|unsR[10]~DUPLICATE            ; 0                 ; 0       ;
 ;      - add_sub:addsub1|unsR[9]~DUPLICATE             ; 0                 ; 0       ;
-;      - ABset:ABset1|B_out[0]~DUPLICATE               ; 0                 ; 0       ;
+;      - ABset:ABset1|A_out[0]~DUPLICATE               ; 0                 ; 0       ;
 ; butt_async                                           ;                   ;         ;
-;      - synchronizer_1bit:button_sync|flop1~feeder    ; 1                 ; 0       ;
+;      - synchronizer_1bit:button_sync|flop1~0         ; 1                 ; 0       ;
 ; num_async[0]                                         ;                   ;         ;
 ;      - synchronizer_9bit:number_sync|flop1[0]        ; 0                 ; 0       ;
 ; num_async[1]                                         ;                   ;         ;
-;      - synchronizer_9bit:number_sync|flop1[1]~feeder ; 1                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[1]        ; 0                 ; 0       ;
 ; num_async[2]                                         ;                   ;         ;
 ;      - synchronizer_9bit:number_sync|flop1[2]        ; 0                 ; 0       ;
 ; num_async[3]                                         ;                   ;         ;
 ;      - synchronizer_9bit:number_sync|flop1[3]        ; 1                 ; 0       ;
 ; num_async[4]                                         ;                   ;         ;
-;      - synchronizer_9bit:number_sync|flop1[4]~feeder ; 1                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[4]        ; 0                 ; 0       ;
 ; num_async[5]                                         ;                   ;         ;
-;      - synchronizer_9bit:number_sync|flop1[5]~feeder ; 1                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[5]        ; 1                 ; 0       ;
 ; num_async[6]                                         ;                   ;         ;
-;      - synchronizer_9bit:number_sync|flop1[6]~feeder ; 0                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[6]~feeder ; 1                 ; 0       ;
 ; num_async[7]                                         ;                   ;         ;
 ;      - synchronizer_9bit:number_sync|flop1[7]        ; 0                 ; 0       ;
 ; num_async[8]                                         ;                   ;         ;
-;      - synchronizer_9bit:number_sync|flop1[8]        ; 1                 ; 0       ;
+;      - synchronizer_9bit:number_sync|flop1[8]~feeder ; 1                 ; 0       ;
 +------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                   ;
-+-------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; ABset:ABset1|Mux0~0                 ; LABCELL_X80_Y10_N42 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ABset:ABset1|Mux9~0                 ; LABCELL_X79_Y10_N6  ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clock                               ; PIN_AF14            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clock                               ; PIN_AF14            ; 69      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; rst                                 ; PIN_AA14            ; 70      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; synchronizer_1bit:button_sync|flop2 ; FF_X78_Y10_N35      ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
-+-------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                  ;
++-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; ABset:ABset1|Mux0~0                 ; LABCELL_X79_Y3_N0  ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ABset:ABset1|Mux9~0                 ; LABCELL_X79_Y3_N18 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; add_sub:addsub1|unsR[5]~3           ; LABCELL_X79_Y3_N24 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; add_sub:addsub1|unsR[7]~0           ; LABCELL_X79_Y3_N9  ; 26      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; clock                               ; PIN_AF14           ; 88      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; output_sel:output_sel1|to_disp[3]~0 ; LABCELL_X79_Y3_N15 ; 14      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; rst                                 ; PIN_AA14           ; 89      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; this_state[1]~1                     ; LABCELL_X79_Y3_N6  ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -1629,7 +1653,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_AF14 ; 69      ; Global Clock         ; GCLK6            ; --                        ;
+; clock ; PIN_AF14 ; 88      ; Global Clock         ; GCLK6            ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1638,14 +1662,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 211 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 22 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 41 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 52 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 218 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 17 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 33 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 40 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 47 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 46 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1701,12 +1725,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 37 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 56 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 66 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 76 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 76 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 116 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 46 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 52 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 62 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 121 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1854,14 +1878,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+--------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary                                  ;
-+-------------------------------------+----------------------+-------------------+
-; Source Clock(s)                     ; Destination Clock(s) ; Delay Added in ns ;
-+-------------------------------------+----------------------+-------------------+
-; synchronizer_1bit:button_sync|flop2 ; clock                ; 14.1              ;
-; clock                               ; clock                ; 11.1              ;
-+-------------------------------------+----------------------+-------------------+
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; clock           ; clock                ; 6.4               ;
++-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -1871,55 +1894,52 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------+----------------------------------------+-------------------+
 ; Source Register                        ; Destination Register                   ; Delay Added in ns ;
 +----------------------------------------+----------------------------------------+-------------------+
-; nsl:nsl1|out_state[0]                  ; this_state[0]                          ; 3.743             ;
-; nsl:nsl1|out_state[1]                  ; this_state[1]                          ; 3.653             ;
-; nsl:nsl1|out_state[2]                  ; this_state[2]                          ; 3.379             ;
-; nsl:nsl1|out_state[3]                  ; this_state[3]                          ; 3.304             ;
-; synchronizer_1bit:button_sync|flop1    ; synchronizer_1bit:button_sync|flop2    ; 2.032             ;
-; ABset:ABset1|A_out[7]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[7]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[6]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[6]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[5]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[5]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[4]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[4]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[3]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[3]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[2]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[2]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[1]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[1]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|A_out[0]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; ABset:ABset1|B_out[0]                  ; add_sub:addsub1|unsR[7]                ; 0.316             ;
-; add_sub:addsub1|unsR[7]                ; double_dabble:dd1|tens[3]              ; 0.301             ;
-; add_sub:addsub1|unsR[8]                ; double_dabble:dd1|tens[3]              ; 0.299             ;
-; add_sub:addsub1|unsR[4]                ; double_dabble:dd1|tens[3]              ; 0.282             ;
-; synchronizer_9bit:number_sync|flop1[4] ; synchronizer_9bit:number_sync|flop2[4] ; 0.273             ;
-; synchronizer_9bit:number_sync|flop1[1] ; synchronizer_9bit:number_sync|flop2[1] ; 0.272             ;
-; add_sub:addsub1|unsR[5]                ; double_dabble:dd1|tens[3]              ; 0.269             ;
-; add_sub:addsub1|unsR[6]                ; double_dabble:dd1|tens[3]              ; 0.244             ;
-; add_sub:addsub1|unsR[3]                ; double_dabble:dd1|tens[3]              ; 0.224             ;
-; add_sub:addsub1|unsR[10]               ; double_dabble:dd1|tens[3]              ; 0.197             ;
-; add_sub:addsub1|unsR[9]                ; double_dabble:dd1|tens[3]              ; 0.185             ;
-; synchronizer_9bit:number_sync|flop1[2] ; synchronizer_9bit:number_sync|flop2[2] ; 0.151             ;
-; add_sub:addsub1|unsR[2]                ; double_dabble:dd1|tens[3]              ; 0.137             ;
-; synchronizer_9bit:number_sync|flop2[7] ; ABset:ABset1|B_out[7]                  ; 0.119             ;
-; synchronizer_9bit:number_sync|flop2[3] ; ABset:ABset1|B_out[3]                  ; 0.119             ;
-; synchronizer_9bit:number_sync|flop1[0] ; synchronizer_9bit:number_sync|flop2[0] ; 0.112             ;
-; this_state[2]                          ; add_sub:addsub1|unsR[0]                ; 0.110             ;
-; synchronizer_1bit:button_sync|flop2    ; nsl:nsl1|out_state[0]                  ; 0.106             ;
-; synchronizer_9bit:number_sync|flop2[5] ; ABset:ABset1|B_out[5]                  ; 0.104             ;
-; synchronizer_9bit:number_sync|flop2[0] ; ABset:ABset1|B_out[0]                  ; 0.104             ;
-; synchronizer_9bit:number_sync|flop2[6] ; ABset:ABset1|B_out[6]                  ; 0.100             ;
-; ABset:ABset1|A_out[8]                  ; add_sub:addsub1|unsR[8]                ; 0.064             ;
-; ABset:ABset1|B_out[8]                  ; add_sub:addsub1|unsR[8]                ; 0.064             ;
-; this_state[3]                          ; add_sub:addsub1|unsR[1]                ; 0.059             ;
-; this_state[0]                          ; add_sub:addsub1|unsR[0]                ; 0.047             ;
-; this_state[1]                          ; add_sub:addsub1|unsR[0]                ; 0.047             ;
-; synchronizer_9bit:number_sync|flop1[6] ; synchronizer_9bit:number_sync|flop2[6] ; 0.013             ;
+; output_sel:output_sel1|to_disp[8]      ; double_dabble:dd1|tens[0]              ; 0.291             ;
+; output_sel:output_sel1|to_disp[2]      ; double_dabble:dd1|hundreds[0]          ; 0.290             ;
+; output_sel:output_sel1|to_disp[7]      ; double_dabble:dd1|tens[0]              ; 0.283             ;
+; output_sel:output_sel1|to_disp[5]      ; double_dabble:dd1|tens[0]              ; 0.256             ;
+; output_sel:output_sel1|to_disp[10]     ; double_dabble:dd1|tens[0]              ; 0.212             ;
+; output_sel:output_sel1|to_disp[9]      ; double_dabble:dd1|tens[0]              ; 0.212             ;
+; output_sel:output_sel1|to_disp[6]      ; double_dabble:dd1|tens[0]              ; 0.212             ;
+; output_sel:output_sel1|to_disp[4]      ; double_dabble:dd1|tens[0]              ; 0.212             ;
+; output_sel:output_sel1|to_disp[3]      ; double_dabble:dd1|tens[0]              ; 0.212             ;
+; this_state[0]                          ; this_state[1]                          ; 0.197             ;
+; synchronizer_1bit:button_sync|flop2    ; this_state[0]                          ; 0.192             ;
+; ABset:ABset1|B_out[1]                  ; add_sub:addsub1|unsR[1]                ; 0.188             ;
+; ABset:ABset1|A_out[1]                  ; add_sub:addsub1|unsR[1]                ; 0.188             ;
+; ABset:ABset1|B_out[0]                  ; add_sub:addsub1|unsR[1]                ; 0.188             ;
+; ABset:ABset1|A_out[0]                  ; add_sub:addsub1|unsR[1]                ; 0.188             ;
+; add_sub:addsub1|unsR[6]                ; add_sub:addsub1|unsR[6]                ; 0.178             ;
+; add_sub:addsub1|unsR[5]                ; add_sub:addsub1|unsR[5]                ; 0.176             ;
+; this_state[3]                          ; add_sub:addsub1|unsR[0]                ; 0.152             ;
+; add_sub:addsub1|unsR[10]               ; add_sub:addsub1|unsR[10]               ; 0.144             ;
+; this_state[1]                          ; add_sub:addsub1|unsR[10]               ; 0.144             ;
+; this_state[2]                          ; add_sub:addsub1|unsR[10]               ; 0.144             ;
+; add_sub:addsub1|unsR[1]                ; add_sub:addsub1|unsR[10]               ; 0.129             ;
+; add_sub:addsub1|unsR[3]                ; add_sub:addsub1|unsR[10]               ; 0.129             ;
+; add_sub:addsub1|unsR[4]                ; add_sub:addsub1|unsR[10]               ; 0.129             ;
+; add_sub:addsub1|unsR[2]                ; add_sub:addsub1|unsR[10]               ; 0.129             ;
+; add_sub:addsub1|unsR[0]                ; add_sub:addsub1|unsR[10]               ; 0.129             ;
+; add_sub:addsub1|unsR[7]                ; add_sub:addsub1|unsR[5]                ; 0.111             ;
+; add_sub:addsub1|unsR[9]                ; add_sub:addsub1|unsR[5]                ; 0.111             ;
+; add_sub:addsub1|unsR[8]                ; add_sub:addsub1|unsR[5]                ; 0.111             ;
+; ABset:ABset1|A_out[2]                  ; add_sub:addsub1|unsR[3]                ; 0.100             ;
+; output_sel:output_sel1|to_disp[1]      ; double_dabble:dd1|tens[0]              ; 0.083             ;
+; ABset:ABset1|B_out[3]                  ; add_sub:addsub1|unsR[3]                ; 0.066             ;
+; ABset:ABset1|A_out[3]                  ; add_sub:addsub1|unsR[3]                ; 0.066             ;
+; ABset:ABset1|B_out[2]                  ; add_sub:addsub1|unsR[3]                ; 0.066             ;
+; synchronizer_9bit:number_sync|flop1[6] ; synchronizer_9bit:number_sync|flop2[6] ; 0.037             ;
+; synchronizer_9bit:number_sync|flop1[4] ; synchronizer_9bit:number_sync|flop2[4] ; 0.024             ;
+; ABset:ABset1|B_out[7]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|A_out[7]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|B_out[6]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|A_out[6]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|B_out[5]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|A_out[5]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|B_out[4]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
+; ABset:ABset1|A_out[4]                  ; add_sub:addsub1|unsR[7]                ; 0.016             ;
 +----------------------------------------+----------------------------------------+-------------------+
-Note: This table only shows the top 47 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 44 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1936,7 +1956,7 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 37 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clock~inputCLKENA0 with 64 fanout uses global clock CLKCTRL_G6
+    Info (11162): clock~inputCLKENA0 with 76 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1949,17 +1969,17 @@ Info (176235): Finished register packing
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:11
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:06
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:07
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X67_Y0 to location X77_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1967,10 +1987,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/projects/HDL/lab5/top/hw/output_files/top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 7972 megabytes
-    Info: Processing ended: Thu Oct 29 14:12:15 2026
-    Info: Elapsed time: 00:01:11
-    Info: Total CPU time (on all processors): 00:05:42
+    Info: Peak virtual memory: 7956 megabytes
+    Info: Processing ended: Mon Nov 02 11:01:16 2026
+    Info: Elapsed time: 00:09:57
+    Info: Total CPU time (on all processors): 00:03:02
 
 
 +----------------------------+

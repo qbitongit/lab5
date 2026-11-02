@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Thu Oct 29 14:11:03 2026
+Mon Nov 02 10:51:18 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,10 +17,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "output_sel:output_sel1"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -46,13 +45,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 29 14:11:03 2026       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 02 10:51:18 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 69                                          ;
+; Total registers                 ; 76                                          ;
 ; Total pins                      ; 37                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -166,8 +165,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,7 +178,6 @@ refer to the applicable agreement for further details.
 ; ../../src/add_sub.vhd            ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/add_sub.vhd           ;         ;
 ; ../../src/seven_seg.vhd          ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/seven_seg.vhd         ;         ;
 ; ../../src/ABset.vhd              ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/ABset.vhd             ;         ;
-; ../../src/blipper.vhd            ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/blipper.vhd           ;         ;
 ; ../../src/double_dabble.vhd      ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/double_dabble.vhd     ;         ;
 ; ../../src/nsl.vhd                ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/nsl.vhd               ;         ;
 ; ../../src/output_sel.vhd         ; yes             ; User VHDL File  ; C:/projects/HDL/lab5/top/src/output_sel.vhd        ;         ;
@@ -189,31 +186,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 57          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 88          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 14          ;
-;     -- 5 input functions                    ; 23          ;
-;     -- 4 input functions                    ; 28          ;
-;     -- <=3 input functions                  ; 23          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 69          ;
-;                                             ;             ;
-; I/O pins                                    ; 37          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 65          ;
-; Total fan-out                               ; 647         ;
-; Average fan-out                             ; 2.80        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 68        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 100       ;
+;     -- 7 input functions                    ; 2         ;
+;     -- 6 input functions                    ; 16        ;
+;     -- 5 input functions                    ; 23        ;
+;     -- 4 input functions                    ; 31        ;
+;     -- <=3 input functions                  ; 28        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 76        ;
+;                                             ;           ;
+; I/O pins                                    ; 37        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 77        ;
+; Total fan-out                               ; 761       ;
+; Average fan-out                             ; 3.04      ;
++---------------------------------------------+-----------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -221,28 +218,29 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name       ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
-; |top                               ; 88 (1)              ; 69 (4)                    ; 0                 ; 0          ; 37   ; 0            ; |top                               ; top               ; work         ;
+; |top                               ; 100 (3)             ; 76 (4)                    ; 0                 ; 0          ; 37   ; 0            ; |top                               ; top               ; work         ;
 ;    |ABset:ABset1|                  ; 2 (2)               ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ABset:ABset1                  ; ABset             ; work         ;
-;    |add_sub:addsub1|               ; 35 (35)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top|add_sub:addsub1               ; add_sub           ; work         ;
+;    |add_sub:addsub1|               ; 42 (42)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top|add_sub:addsub1               ; add_sub           ; work         ;
 ;    |double_dabble:dd1|             ; 28 (28)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |top|double_dabble:dd1             ; double_dabble     ; work         ;
-;    |nsl:nsl1|                      ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|nsl:nsl1                      ; nsl               ; work         ;
+;    |output_sel:output_sel1|        ; 3 (3)               ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top|output_sel:output_sel1        ; output_sel        ; work         ;
 ;    |seven_seg:hex0|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:hex0                ; seven_seg         ; work         ;
 ;    |seven_seg:hex1|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:hex1                ; seven_seg         ; work         ;
 ;    |seven_seg:hex2|                ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_seg:hex2                ; seven_seg         ; work         ;
-;    |synchronizer_1bit:button_sync| ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|synchronizer_1bit:button_sync ; synchronizer_1bit ; work         ;
+;    |synchronizer_1bit:button_sync| ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|synchronizer_1bit:button_sync ; synchronizer_1bit ; work         ;
 ;    |synchronizer_9bit:number_sync| ; 0 (0)               ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |top|synchronizer_9bit:number_sync ; synchronizer_9bit ; work         ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                           ;
-+---------------------------------------+--------------------------------------+
-; Register name                         ; Reason for Removal                   ;
-+---------------------------------------+--------------------------------------+
-; add_sub:addsub1|unsR[11]              ; Merged with add_sub:addsub1|unsR[10] ;
-; Total Number of Removed Registers = 1 ;                                      ;
-+---------------------------------------+--------------------------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++---------------------------------------+------------------------------------------------+
+; Register name                         ; Reason for Removal                             ;
++---------------------------------------+------------------------------------------------+
+; output_sel:output_sel1|to_disp[11]    ; Merged with output_sel:output_sel1|to_disp[10] ;
+; add_sub:addsub1|unsR[11]              ; Merged with add_sub:addsub1|unsR[10]           ;
+; Total Number of Removed Registers = 2 ;                                                ;
++---------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -250,12 +248,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 69    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 65    ;
+; Total registers                              ; 76    ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 76    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Clock Enable       ; 26    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -265,28 +263,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; this_state[0]                          ; 5       ;
-; Total number of inverted registers = 1 ;         ;
+; this_state[0]                          ; 8       ;
+; synchronizer_1bit:button_sync|flop2    ; 2       ;
+; synchronizer_1bit:button_sync|flop1    ; 1       ;
+; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 17:1               ; 7 bits    ; 77 LEs        ; 28 LEs               ; 49 LEs                 ; Yes        ; |top|add_sub:addsub1|unsR[6] ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 8 LEs                ; 14 LEs                 ; Yes        ; |top|add_sub:addsub1|unsR[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "output_sel:output_sel1"                                                                ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; to_disp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|this_state[1]                     ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 6 LEs                ; 14 LEs                 ; Yes        ; |top|output_sel:output_sel1|to_disp[9] ;
+; 16:1               ; 9 bits    ; 90 LEs        ; 0 LEs                ; 90 LEs                 ; Yes        ; |top|output_sel:output_sel1|to_disp[3] ;
+; 18:1               ; 7 bits    ; 84 LEs        ; 28 LEs               ; 56 LEs                 ; Yes        ; |top|add_sub:addsub1|unsR[5]           ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|add_sub:addsub1|unsR[3]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -294,27 +288,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 69                          ;
-;     CLR               ; 47                          ;
-;     ENA CLR           ; 18                          ;
-;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 92                          ;
+; arriav_ff             ; 76                          ;
+;     CLR               ; 41                          ;
+;     CLR SCLR SLD      ; 9                           ;
+;     ENA CLR           ; 26                          ;
+; arriav_lcell_comb     ; 104                         ;
 ;     arith             ; 10                          ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
-;     normal            ; 71                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         4 data inputs ; 28                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 81                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 31                          ;
 ;         5 data inputs ; 23                          ;
-;         6 data inputs ; 14                          ;
+;         6 data inputs ; 16                          ;
 ;     shared            ; 11                          ;
 ;         0 data inputs ; 2                           ;
 ;         2 data inputs ; 9                           ;
 ; boundary_port         ; 37                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.04                        ;
+; Average LUT depth     ; 2.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -333,7 +330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Oct 29 14:10:49 2026
+    Info: Processing started: Mon Nov 02 10:50:51 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -350,13 +347,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file /projec
     Info (12022): Found design unit 1: ABset-beh File: C:/projects/HDL/lab5/top/src/ABset.vhd Line: 17
     Info (12023): Found entity 1: ABset File: C:/projects/HDL/lab5/top/src/ABset.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab5/top/src/blipper.vhd
-    Info (12022): Found design unit 1: blipper-beh File: C:/projects/HDL/lab5/top/src/blipper.vhd Line: 13
+    Info (12022): Found design unit 1: blipper-beh File: C:/projects/HDL/lab5/top/src/blipper.vhd Line: 15
     Info (12023): Found entity 1: blipper File: C:/projects/HDL/lab5/top/src/blipper.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab5/top/src/double_dabble.vhd
     Info (12022): Found design unit 1: double_dabble-beh File: C:/projects/HDL/lab5/top/src/double_dabble.vhd Line: 17
     Info (12023): Found entity 1: double_dabble File: C:/projects/HDL/lab5/top/src/double_dabble.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab5/top/src/nsl.vhd
-    Info (12022): Found design unit 1: nsl-beh File: C:/projects/HDL/lab5/top/src/nsl.vhd Line: 13
+    Info (12022): Found design unit 1: nsl-beh File: C:/projects/HDL/lab5/top/src/nsl.vhd Line: 14
     Info (12023): Found entity 1: nsl File: C:/projects/HDL/lab5/top/src/nsl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file /projects/hdl/lab5/top/src/output_sel.vhd
     Info (12022): Found design unit 1: output_sel-beh File: C:/projects/HDL/lab5/top/src/output_sel.vhd Line: 16
@@ -368,33 +365,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file /projec
     Info (12022): Found design unit 1: synchronizer_9bit-beh File: C:/projects/HDL/lab5/top/src/synchronizer_9bit.vhd Line: 17
     Info (12023): Found entity 1: synchronizer_9bit File: C:/projects/HDL/lab5/top/src/synchronizer_9bit.vhd Line: 8
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at top.vhd(13): used implicit default value for signal "state_leds" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/projects/HDL/lab5/top/src/top.vhd Line: 13
-Warning (10036): Verilog HDL or VHDL warning at top.vhd(114): object "in2disp" assigned a value but never read File: C:/projects/HDL/lab5/top/src/top.vhd Line: 114
-Info (12128): Elaborating entity "synchronizer_1bit" for hierarchy "synchronizer_1bit:button_sync" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 126
-Info (12128): Elaborating entity "blipper" for hierarchy "blipper:blipper1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 134
-Info (12128): Elaborating entity "nsl" for hierarchy "nsl:nsl1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 140
-Info (12128): Elaborating entity "synchronizer_9bit" for hierarchy "synchronizer_9bit:number_sync" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 147
-Info (12128): Elaborating entity "ABset" for hierarchy "ABset:ABset1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 155
-Info (12128): Elaborating entity "add_sub" for hierarchy "add_sub:addsub1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 165
-Info (12128): Elaborating entity "output_sel" for hierarchy "output_sel:output_sel1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 175
-Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:dd1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 185
-Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:hex2" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 195
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "state_leds[0]" is stuck at GND File: C:/projects/HDL/lab5/top/src/top.vhd Line: 13
-    Warning (13410): Pin "state_leds[1]" is stuck at GND File: C:/projects/HDL/lab5/top/src/top.vhd Line: 13
-    Warning (13410): Pin "state_leds[2]" is stuck at GND File: C:/projects/HDL/lab5/top/src/top.vhd Line: 13
-    Warning (13410): Pin "state_leds[3]" is stuck at GND File: C:/projects/HDL/lab5/top/src/top.vhd Line: 13
+Info (12128): Elaborating entity "synchronizer_1bit" for hierarchy "synchronizer_1bit:button_sync" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 120
+Info (12128): Elaborating entity "nsl" for hierarchy "nsl:nsl1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at nsl.vhd(20): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab5/top/src/nsl.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at nsl.vhd(23): signal "in_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab5/top/src/nsl.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at nsl.vhd(25): signal "in_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/projects/HDL/lab5/top/src/nsl.vhd Line: 25
+Info (12128): Elaborating entity "synchronizer_9bit" for hierarchy "synchronizer_9bit:number_sync" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 136
+Info (12128): Elaborating entity "ABset" for hierarchy "ABset:ABset1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 144
+Info (12128): Elaborating entity "add_sub" for hierarchy "add_sub:addsub1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 154
+Info (12128): Elaborating entity "output_sel" for hierarchy "output_sel:output_sel1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 164
+Info (12128): Elaborating entity "double_dabble" for hierarchy "double_dabble:dd1" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 174
+Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:hex2" File: C:/projects/HDL/lab5/top/src/top.vhd Line: 184
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 186 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 133 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4935 megabytes
-    Info: Processing ended: Thu Oct 29 14:11:03 2026
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (21061): Implemented 149 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4933 megabytes
+    Info: Processing ended: Mon Nov 02 10:51:18 2026
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:26
 
 

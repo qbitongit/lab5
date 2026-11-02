@@ -50,8 +50,12 @@ i_num : process
 begin
 
 for i in 0 to 44 loop
-num_tb <= std_logic_vector(unsigned(num_tb) + 11);
-wait for 33 ns;
+num_tb <= std_logic_vector(unsigned(num_tb) + 31);
+wait for 250 ns;
+end loop;
+for i in 0 to 44 loop
+num_tb <= std_logic_vector(unsigned(num_tb) - 31);
+wait for 250 ns;
 end loop;
 wait;
 	
@@ -59,10 +63,11 @@ end process;
 
 state : process
 begin
+wait for 100 ns;
 butt_tb <= '0';
-wait for 10 ns;
+wait for 50 ns;
 butt_tb <= '1';
-wait for 222 ns;
+wait for 100 ns;
 end process;
 
 uut : top

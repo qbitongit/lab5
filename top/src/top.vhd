@@ -84,20 +84,12 @@ end component;
 
 component nsl is
 port(
+reset : in std_logic;
 in_state : in std_logic_vector(3 downto 0);
 flag : in std_logic;
 out_state : out std_logic_vector(3 downto 0)
 );
 end component;
-
-component blipper is
-port (
-clk : in std_logic;
-reset : in std_logic;
-button	: in std_logic;
-blip	: out std_logic := '0'
- );  
-end component;  
 
 component synchronizer_1bit is 
   port (
@@ -111,8 +103,8 @@ end component;
 
 signal butt_sync : std_logic := '1';
 signal state_trig : std_logic := '0';
-signal this_state : std_logic_vector(3 downto 0);
-signal next_state : std_logic_vector(3 downto 0);
+signal this_state : std_logic_vector(3 downto 0):= "0001";
+signal next_state : std_logic_vector(3 downto 0) := "0001";
 signal in2disp : std_logic_vector(11 downto 0);
 signal result : std_logic_vector(11 downto 0);
 signal A_sig : std_logic_vector(8 downto 0);
@@ -133,18 +125,11 @@ async_in => butt_async,
 sync_out => butt_sync
 );
 
-blipper1 : blipper
-port map(
-clk => clock,
-reset => rst,
-button => butt_sync,
-blip => state_trig
-);
-
 nsl1 : nsl
 port map(
+reset => rst,
 in_state => this_state,
-flag => state_trig,
+flag => butt_sync,
 out_state => next_state
 );
 
@@ -190,7 +175,7 @@ dd1 : double_dabble
 port map(
 clk => clock,
 reset => rst,
-result_padded => result,
+result_padded => in2disp,
 ones => ones2hex,
 tens => tens2hex,
 hundreds => hund2hex
@@ -220,17 +205,14 @@ begin
 
 if rst = '1' then
 this_state <= "0001";
-next_state <= "0001";
 elsif rising_edge(clock) then
 this_state <= next_state;
 
 end if;
 
-state_leds <= this_state;
-
-
 end process;
 
+state_leds <= this_state;
 
 
 end arch;

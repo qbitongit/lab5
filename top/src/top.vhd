@@ -220,14 +220,17 @@ begin
 
 if rst = '1' then
 this_state <= "0001";
-
+next_state <= "0001";
 elsif rising_edge(clock) then
 this_state <= next_state;
-	
+
 end if;
 
 state_leds <= this_state;
 
+
 end process;
+
+
 
 end arch;

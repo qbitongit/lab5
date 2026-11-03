@@ -100,6 +100,15 @@ component synchronizer_1bit is
   );
 end component;
 
+component blipper is
+port (
+clk : in std_logic;
+reset : in std_logic;
+button	: in std_logic;
+blip	: out std_logic := '0'
+ );  
+end component;
+
 signal rst : std_logic := '0';
 signal butt_sync : std_logic := '1';
 signal state_trig : std_logic := '0';
@@ -125,11 +134,20 @@ async_in => butt_async,
 sync_out => butt_sync
 );
 
+button_signal : blipper
+port map(
+reset => rst,
+clk => clock,
+button => butt_sync,
+blip => state_trig
+);
+
+
 nsl1 : nsl
 port map(
 reset => rst,
 in_state => this_state,
-flag => butt_sync,
+flag => state_trig,
 out_state => next_state
 );
 

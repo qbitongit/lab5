@@ -13,7 +13,7 @@ component top is
 port(
 
 clock : in std_logic;
-rst : in std_logic;
+reset_button : in std_logic;
 butt_async : in std_logic;
 num_async : in std_logic_vector(8 downto 0);
 state_leds : out std_logic_vector(3 downto 0);
@@ -41,7 +41,7 @@ end process;
 
 reset : process
 begin
-wait for 50 ns;
+wait for 5 ms;
 rst_tb <= '1';
 wait;
 end process;
@@ -51,11 +51,11 @@ begin
 
 for i in 0 to 44 loop
 num_tb <= std_logic_vector(unsigned(num_tb) + 31);
-wait for 250 ns;
+wait for 10 ms;
 end loop;
 for i in 0 to 44 loop
 num_tb <= std_logic_vector(unsigned(num_tb) - 31);
-wait for 250 ns;
+wait for 10 ms;
 end loop;
 wait;
 	
@@ -63,17 +63,17 @@ end process;
 
 state : process
 begin
-wait for 100 ns;
+wait for 5 ms;
 butt_tb <= '0';
-wait for 50 ns;
+wait for 1 ms;
 butt_tb <= '1';
-wait for 100 ns;
+wait for 5 ms;
 end process;
 
 uut : top
 port map(
 clock => clock_tb,
-rst => rst_tb,
+reset_button => rst_tb,
 butt_async => butt_tb,
 num_async => num_tb,
 state_leds => open,

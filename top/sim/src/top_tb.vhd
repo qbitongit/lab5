@@ -25,7 +25,7 @@ hex100s : out std_logic_vector(6 downto 0)
 end component;
 	
 signal clock_tb : std_logic := '0';
-signal rst_tb : std_logic := '1';
+signal rst_tb : std_logic := '0';
 signal butt_tb : std_logic := '1';
 signal num_tb  : std_logic_vector(8 downto 0):= (others => '0');
 	
@@ -42,7 +42,7 @@ end process;
 reset : process
 begin
 wait for 50 ns;
-rst_tb <= '0';
+rst_tb <= '1';
 wait;
 end process;
 

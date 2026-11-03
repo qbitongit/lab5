@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon Nov 02 10:51:18 2026
+Mon Nov 02 21:40:44 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Nov 02 10:51:18 2026       ;
+; Analysis & Synthesis Status     ; Successful - Mon Nov 02 21:40:44 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top                                         ;
 ; Top-level Entity Name           ; top                                         ;
@@ -186,31 +186,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 68        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 100       ;
-;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 16        ;
-;     -- 5 input functions                    ; 23        ;
-;     -- 4 input functions                    ; 31        ;
-;     -- <=3 input functions                  ; 28        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 76        ;
-;                                             ;           ;
-; I/O pins                                    ; 37        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 77        ;
-; Total fan-out                               ; 761       ;
-; Average fan-out                             ; 3.04      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimate of Logic utilization (ALMs needed) ; 68                 ;
+;                                             ;                    ;
+; Combinational ALUT usage for logic          ; 100                ;
+;     -- 7 input functions                    ; 2                  ;
+;     -- 6 input functions                    ; 16                 ;
+;     -- 5 input functions                    ; 23                 ;
+;     -- 4 input functions                    ; 31                 ;
+;     -- <=3 input functions                  ; 28                 ;
+;                                             ;                    ;
+; Dedicated logic registers                   ; 76                 ;
+;                                             ;                    ;
+; I/O pins                                    ; 37                 ;
+;                                             ;                    ;
+; Total DSP Blocks                            ; 0                  ;
+;                                             ;                    ;
+; Maximum fan-out node                        ; reset_button~input ;
+; Maximum fan-out                             ; 77                 ;
+; Total fan-out                               ; 761                ;
+; Average fan-out                             ; 3.04               ;
++---------------------------------------------+--------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -330,7 +330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 02 10:50:51 2026
+    Info: Processing started: Mon Nov 02 21:40:30 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -384,9 +384,9 @@ Info (21057): Implemented 186 device resources after synthesis - the final resou
     Info (21059): Implemented 25 output pins
     Info (21061): Implemented 149 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4933 megabytes
-    Info: Processing ended: Mon Nov 02 10:51:18 2026
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4912 megabytes
+    Info: Processing ended: Mon Nov 02 21:40:44 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
 
 

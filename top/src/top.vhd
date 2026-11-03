@@ -7,7 +7,7 @@ entity top is
 port(
 
 clock : in std_logic;
-rst : in std_logic;
+reset_button : in std_logic;
 butt_async : in std_logic;
 num_async : in std_logic_vector(8 downto 0);
 state_leds : out std_logic_vector(3 downto 0);
@@ -60,7 +60,7 @@ B : in std_logic_vector(8 downto 0);
 state : in std_logic_vector(3 downto 0);
 R  : out std_logic_vector(11 downto 0)
 );
-end component; 
+end component;
 
 component ABset is
 port(
@@ -100,7 +100,7 @@ component synchronizer_1bit is
   );
 end component;
 
-
+signal rst : std_logic := '0';
 signal butt_sync : std_logic := '1';
 signal state_trig : std_logic := '0';
 signal this_state : std_logic_vector(3 downto 0):= "0001";
@@ -213,6 +213,7 @@ end if;
 end process;
 
 state_leds <= this_state;
+rst <= not reset_button;
 
 
 end arch;

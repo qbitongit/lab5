@@ -29,7 +29,7 @@ set_global_assignment -name VHDL_FILE ../../src/synchronizer_9bit.vhd
 
 
 # 3] set your pin constraints here
-set_location_assignment PIN_AA14 -to rst
+set_location_assignment PIN_AA14 -to reset_button
 set_location_assignment PIN_AA15 -to butt_async
 set_location_assignment PIN_AF14 -to clock
 

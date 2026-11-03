@@ -20,7 +20,7 @@ radix define States {
 }
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /top_tb/uut/clock
-add wave -noupdate /top_tb/uut/rst
+add wave -noupdate /top_tb/uut/reset_button
 add wave -noupdate /top_tb/uut/butt_async
 add wave -noupdate -radix Unsigned /top_tb/uut/num_async
 add wave -noupdate /top_tb/uut/state_leds

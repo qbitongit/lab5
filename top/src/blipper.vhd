@@ -15,27 +15,31 @@ end blipper;
 architecture beh of blipper is
 
 signal out_sig : std_logic := '0';
+signal count : unsigned(7 downto 0) := (others => '0');
+constant max_count : unsigned(7 downto 0) := (others => '1');
+signal is_counting boolean;
 
 begin
 
-process(button, clk, reset)
+
+button_pressed : process(button)
 
 begin
 
-if reset = '1' then
-out_sig <= '0';
-
-elsif rising_edge(clk) then
+if falling_edge(button) then
 
 if button = '0' then
-out_sig <= '1';
+is_counting <= true;
 else
-out_sig <= '0';
+is_counting <= false;
 end if;
 
 end if;
 	
 end process;
+
+waiter : process(clk, reset)
+
 
 blip <= out_sig;
 

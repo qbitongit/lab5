@@ -19,7 +19,7 @@ begin
 
 if reset = '1' then
 out_state <= "0001";
-elsif flag = '0' then
+elsif falling_edge(flag) then
 out_state <= (in_state(2 downto 0) & in_state(3));
 else
 out_state <= in_state;

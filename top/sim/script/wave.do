@@ -41,7 +41,7 @@ configure wave -rowmargin 4
 configure wave -childrowmargin 2
 configure wave -gridoffset 0
 configure wave -gridperiod 1
-configure wave -griddelta 40
+configure wave -griddelta 400
 configure wave -timeline 0
 configure wave -timelineunits ms
 update

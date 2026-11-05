@@ -85,20 +85,13 @@ end component;
 component nsl is
 port(
 reset : in std_logic;
+clk : in std_logic;
 in_state : in std_logic_vector(3 downto 0);
 flag : in std_logic;
 out_state : out std_logic_vector(3 downto 0)
 );
 end component;
 
-component synchronizer_1bit is 
-  port (
-    clk               : in std_logic;
-    reset             : in std_logic;
-    async_in          : in std_logic;
-    sync_out          : out std_logic
-  );
-end component;
 
 component blipper is
 port (
@@ -126,19 +119,11 @@ signal hund2hex : std_logic_vector(3 downto 0);
 
 begin
 
-button_sync : synchronizer_1bit
-port map(
-clk => clock,
-reset => rst,
-async_in => butt_async,
-sync_out => butt_sync
-);
-
 button_signal : blipper
 port map(
 reset => rst,
 clk => clock,
-button => butt_sync,
+button => butt_async,
 blip => state_trig
 );
 
@@ -146,6 +131,7 @@ blip => state_trig
 nsl1 : nsl
 port map(
 reset => rst,
+clk => clock,
 in_state => this_state,
 flag => state_trig,
 out_state => next_state
@@ -217,21 +203,10 @@ bcd => hund2hex,
 seven_seg_out => hex100s
 );
 
-
-state : process(clock, rst)
-begin
-
-if rst = '1' then
-this_state <= "0001";
-elsif rising_edge(clock) then
-this_state <= next_state;
-
-end if;
-
-end process;
-
 state_leds <= this_state;
 rst <= not reset_button;
+this_state <= next_state;
+
 
 
 end arch;

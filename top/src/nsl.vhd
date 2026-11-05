@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 entity nsl is
 port(
 reset : in std_logic;
+clk : in std_logic;
 in_state : in std_logic_vector(3 downto 0);
 flag : in std_logic;
 out_state : out std_logic_vector(3 downto 0)
@@ -12,20 +13,32 @@ out_state : out std_logic_vector(3 downto 0)
 end nsl;
 
 architecture beh of nsl is
+
+	signal state_sig1 : std_logic_vector(3 downto 0) := "0001";
+	signal state_sig2 : std_logic_vector(3 downto 0) := "0001";
+	signal pressed : std_logic := '0';
+
 begin
 
-next_state : process (flag)
+next_state : process (clk, reset, flag)
 begin
 
 if reset = '1' then
-out_state <= "0001";
-elsif rising_edge(flag) then
-out_state <= (in_state(2 downto 0) & in_state(3));
+state_sig1 <= "0001";
+state_sig2 <= "0001";
+
+elsif rising_edge(clk) then
+
+if flag = '1' then
+state_sig1 <= (in_state(2 downto 0) & in_state(3));
 else
-out_state <= in_state;
+state_sig2 <= state_sig1;
 end if;
 
+end if;
 
 end process;
+
+out_state <= state_sig2;
 
 end beh;

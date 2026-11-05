@@ -33,6 +33,10 @@ set_location_assignment PIN_AA14 -to reset_button
 set_location_assignment PIN_AA15 -to butt_async
 set_location_assignment PIN_AF14 -to clock
 
+set_location_assignment PIN_V16 -to state_leds[0]
+set_location_assignment PIN_W16 -to state_leds[1]
+set_location_assignment PIN_V17 -to state_leds[2]
+set_location_assignment PIN_V18 -to state_leds[3]
 
 set_location_assignment PIN_AB12 -to num_async[0]
 set_location_assignment PIN_AC12 -to num_async[1]
